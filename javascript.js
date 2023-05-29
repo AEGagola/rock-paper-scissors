@@ -1,12 +1,12 @@
 function getComputerChoice() {
 
     let i = Math.floor(Math.random() * 3);
-    let compChoice = "paper";
+    let compChoice = "PAPER";
 
     if (i == 0) {
-        compChoice = "rock";
+        compChoice = "ROCK";
     } else if (i == 1) {
-        compChoice = "scissor";
+        compChoice = "SCISSORS";
     }
 
     return compChoice;
@@ -14,10 +14,29 @@ function getComputerChoice() {
 
 function playerSelection() {
     var playerInput = prompt("Let's play! Rock, paper, or scissors?");
-    playerInput = playerInput.toUpperCase(); 
+    playerInput = playerInput.toUpperCase();
     return playerInput;
 }
 
 
+function playRound(playerSelection, computerSelection) {
 
-console.log(playerSelection());
+    if (playerSelection == computerSelection) {
+        console.log("Tie!");
+    } else if ((playerSelection == "ROCK") && (computerSelection == "SCISSORS")) {
+        console.log("You win! Rock SMASHES scissors!");
+    } else if ((playerSelection == "ROCK") && (computerSelection == "PAPER")) {
+        console.log("You lose! Paper COVERS rock!");
+    } else if ((playerSelection == "PAPER") && (computerSelection == "ROCK")) {
+        console.log("You win! Paper COVERS rock!");
+    } else if ((playerSelection == "PAPER") && (computerSelection == "SCISSORS")) {
+        console.log("You lose! Scissors CUTS paper!");
+    } else if ((playerSelection == "SCISSORS") && (computerSelection == "PAPER")) {
+        console.log("You win! Scissors CUTS paper!");
+    } else if ((playerSelection == "SCISSORS") && (computerSelection == "ROCK")) {
+        console.log("You lose! Rock SMASHES scissors!");
+    }
+
+
+}
+
