@@ -12,4 +12,12 @@ function getComputerChoice() {
     return compChoice;
 }
 
-console.log(getComputerChoice())
+function playerSelection() {
+    var playerInput = prompt("Let's play! Rock, paper, or scissors?");
+    playerInput = playerInput.toUpperCase(); 
+    return playerInput;
+}
+
+
+
+console.log(playerSelection());
