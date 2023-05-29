@@ -36,7 +36,19 @@ function playRound(playerSelection, computerSelection) {
     } else if ((playerSelection == "SCISSORS") && (computerSelection == "ROCK")) {
         console.log("You lose! Rock SMASHES scissors!");
     }
-
-
 }
 
+function game(){
+    let i = 0;
+
+    while (i < 5){
+        const compChoice = getComputerChoice();
+        const playerChoice = playerSelection();
+        playRound(playerChoice,compChoice);
+        console.log("Player Choice: " + playerChoice);
+        console.log("CPU Choice: " + compChoice);
+        i++;
+    }
+}
+
+game();
